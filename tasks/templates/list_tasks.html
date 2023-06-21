@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body class="bg-dark">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 offset-md-4">
+
+                <form action="new/" method="POST" class="card card-body bg-secondary">
+                    {% csrf_token %}
+                    <input type="text" name="task" class="form-control mb-2" placeholder="Buscar jurisprudencias">
+                    <button class="btn btn-primary ">Guardar</button>
+                </form>
+
+                <table class="table table-striped mt-2">
+                    <thead>
+                        <th scope="col">#</th>
+                        <th scope="col">Nombre Proyecto</th>
+                    </thead>
+                    <tbody>
+                        {% for task in tasks %}
+
+                            <tr>
+                                <th scope="row">{{task.id}}</th>
+                                <th scope="row">{{task.nombreProyecto}}</th>
+                            </tr>
+                        {% empty %}
+                            <h1 class="text-light bg-dark text-center">Aun no se guardan jurisprudencias</h1>
+                        {% endfor %}
+                    </tbody>
+                </table>
+
+ 
+            </div>
+        </div>
+
+    </div>
+    
+   
+    
+</body>
+</html>
