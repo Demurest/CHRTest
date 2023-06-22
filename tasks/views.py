@@ -8,7 +8,7 @@ from django.core.paginator import Paginator
 def buscarJurisprudencias(request):
     
     url = "https://www.buscadorambiental.cl/buscador-api/jurisprudencias/list"
-    print(request.POST['task'])
+    
     payload = {
         "page":1,
         "pageSize":10,
@@ -44,6 +44,6 @@ def buscarJurisprudencias(request):
 
 def list_tasks(request):
 
-    tasks= Jurisprudencias.objects.all()
+    #pagina principal
     
     return render(request, 'list_tasks.html')
