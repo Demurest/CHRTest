@@ -27,7 +27,7 @@ tambien es necesario que instales las siguientes versiones:
 
 **Python 3.10.9**
 
-Por ultimo tienes que tener **PostgreSQL** instalado.
+Por ultimo tienes que tener **PostgreSQL** instalado y tienes que tener en el PATH el chromedriver.
 ### Creando la base de datos
 Tienes que crear una base de datos en PostgreSQL con las siguientes caracteristicas:
 
