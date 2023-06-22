@@ -40,16 +40,18 @@ puerto: **5432**
 Versiones a utilizar:
 **Django 4.2.2**
 **requests 2.31.0**
-**psycopg2**
+**psycopg2 2.9.6**
+**selenium 4.10.0**
 
 Primero tenemos que instalar Django:
 ```
 pip install django==4.2.2
 ```
-Luego instalamos **requests** y **psycopg2**:
+Luego instalamos **requests** , **psycopg2** y **selenium 4.10.0** :
 ```
 pip install requests==2.31.0
 pip install psycopg2==2.9.6
+pip install selenium==4.10.0
 ```
 Despues tenemos que hacer las migraciones para crear la tabla en la BDD :
 ```
@@ -69,3 +71,9 @@ La principal función del de esta app es que puedes guardar una jurisprudencia e
 
 ### Tarea 2
 
+Las pruebas hechas con selenium se utilizan para probar los filtros de la página solicitada obteniendo los resultados entregados por este.
+
+Para iniciar las pruebas se tiene que ejecutar el siguiente código en consola:
+```
+python manage.py test
+```
